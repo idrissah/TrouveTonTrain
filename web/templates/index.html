@@ -1,0 +1,62 @@
+<html>
+<meta charset="UTF-8">
+<head>
+    <link href="static/css/demo.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="{{ url_for('static', filename='semantic/semantic.css') }}" media="all" rel="stylesheet"
+          type="text/css"/>
+    <title>Formulaire de recherche gare</title>
+</head>
+<body>
+
+<h1 class="ui center aligned icon header">
+    <i class="hand point up icon"></i>
+    Trouve ton train
+</h1>
+
+<form action="/response" method="GET" class="ui form">
+    <div class="field">
+        <label> Gare de depart: </label>
+        <select name="gareD" id="gareD" class="ui search dropdown" required="required">
+            <option value="">Choisissez votre départ...</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <label>Gare d'arrive: </label>
+        <select name="gareA" id="gareA" class="ui search dropdown" required="required">
+            <option value="">Choisissez votre arrivée...</option>
+        </select>
+    </div>
+    <div class=button>
+        <input type="submit" value="Rechercher" class="ui primary button">
+    </div>
+</form>
+
+<footer class="ui vertical footer segment" style="margin-top: 1.2rem;">
+    <div class="ui center aligned container">
+        <div class="ui horizontal small divided link list">
+            <p class="item"> Created by Hilda IDRISSA</p>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='semantic/semantic.js') }}"></script>
+<script>
+    $('#gareA')
+        .dropdown({
+            apiSettings: {
+                url: '/afficheRouteA?gareA={query}'
+            }
+        })
+    ;
+    $('#gareD')
+        .dropdown({
+            apiSettings: {
+                url: '/afficheRouteD?gareD={query}'
+            }
+        })
+    ;
+</script>
+</body>
+</html>

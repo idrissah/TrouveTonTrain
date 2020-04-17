@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "avenir book";
+    src: url("/fonts/Avenir-Book.ttf");
+}
+
+@font-face {
+    font-family: "airstrikeb3d";
+    src: url("/fonts/airstrike/airstrikeb3d.ttf");
+}
+
+:root {
+    --main-bg-color: #e9e9e9;
+    --main-footer-color: #dedede;
+    --text-orange: #ff852d;
+    --text-gris: #dedede;
+    --orange-gradient-light: #feca00;
+    --orange-gradient-dark: #ef5d00;
+    --font-family-avenir-book: "avenir book", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-avenir-airstrikeb3d: "airstrikeb3d";
+}

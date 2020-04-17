@@ -1,0 +1,65 @@
+@import "_variables.css";
+@import "_reset.css";
+@import "_footer.css";
+@import "_nav.css";
+@import "_header.css";
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: var(--font-family-avenir-book);
+}
+
+aside {
+    background-color: white;
+}
+
+.card-result {
+    margin-bottom: 20px;
+    box-shadow: inset 0px 2px 31px 4px rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    border-radius: 11px;
+    transition: background .3s;
+}
+
+.card-result:hover {
+    background-color: var(--orange-gradient-dark);
+    color: white;
+}
+
+.card-result-price {
+    font-family: cursive;
+}
+
+.bg-orange {
+    background-color: var(--text-orange) !important;
+}
+
+.bg-gray {
+    background-color: var(--main-bg-color);
+}
+
+.text-gray {
+    color: var(--text-gris)
+}
+
+.form-control, .btn {
+    height: 44px;
+}
+
+.btn-orange {
+    background-color: var(--orange-gradient-dark);
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: transparent;
+    border: 1px solid var(--orange-gradient-dark);
+    color: var(--orange-gradient-dark);
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .bg-md-white {
+        background-color: #fff !important;
+    }
+}
