@@ -1,6 +1,7 @@
 # TrouveTonTrain - Client #
-Projet trouve ton train, qu'on a fait lors d'un projet en master 1. 
-La partie client
+Projet trouve ton train, qu'on a fait lors d'un projet en master 1.<br/>
+
+> La partie client de ce projet a été édité en **python 3.6**
 
 ## Installation ##
 
