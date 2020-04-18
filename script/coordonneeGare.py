@@ -46,7 +46,7 @@ def coordonneeGare(gareD, gareA):
     print(coordGareA)
     print(coordGareD)
     distance = requests.get(
-        "https://fast3t.azurewebsites.net/TD2_ETRS804_war_exploded/Billing?latitude1=" + coordGareA[0] + "&longitude1=" + coordGareA[1] + "&latitude2=" + coordGareD[0] + "&longitude2=" + coordGareD[1])
+        "https://fast3t.azurewebsites.net/CalculDistance?latitude1=" + coordGareA[0] + "&longitude1=" + coordGareA[1] + "&latitude2=" + coordGareD[0] + "&longitude2=" + coordGareD[1])
     # Exemple de l'url http://localhost:8080/TD2_ETRS804_war_exploded/Billing?latitude1=5.714584&longitude1=45.191493&latitude2=2.275149&longitude2=48.85645
     print(distance.text)
     dis = distance.text.rstrip()
