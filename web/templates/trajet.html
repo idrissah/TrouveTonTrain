@@ -7,7 +7,7 @@
     <title>Trajet voyage</title>
     <style>
         .cursor-link:hover {
-            background-color:rgba(0,0,0,.075);
+            background-color: rgba(0, 0, 0, .075);
         }
     </style>
 </head>
@@ -23,6 +23,15 @@
 </header>
 
 <section class="container-fluid">
+
+    {%if stop_arrays|length == 0 %}
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Ouups !</h4>
+        <p>Aucun trajet n'a été trouvé.</p>
+        <hr>
+        <p class="mb-0">Il n y a pas de train pour ce trajet. Veuillez recommencer avec une nouvelle !</p>
+    </div>
+    {%endif%}
 
     {%for stop_array in stop_arrays%}
     <div class="card col-12 mb-4 cursor-link">
