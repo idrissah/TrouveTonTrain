@@ -38,14 +38,14 @@ def listTrajet(gare_a, gare_d):
     time_format = "%H:%M"
     result = []
     print(request_url)
-    for element in response['journeys']:
-        depart = datetime.strptime(element['departure_date_time'], api_format)
-        arrival = datetime.strptime(element['arrival_date_time'], api_format)
+    if 'journeys' in response:
+        for element in response['journeys']:
+            depart = datetime.strptime(element['departure_date_time'], api_format)
+            arrival = datetime.strptime(element['arrival_date_time'], api_format)
 
-        result.append({
-            "depart_date": depart.strftime(date_format),
-            "depart_time": depart.strftime(time_format),
-            "arrival_time": arrival.strftime(time_format)
-        })
-
+            result.append({
+                "depart_date": depart.strftime(date_format),
+                "depart_time": depart.strftime(time_format),
+                "arrival_time": arrival.strftime(time_format)
+            })
     return result
